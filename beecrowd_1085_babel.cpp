@@ -40,7 +40,7 @@ vector<Vertex*> build_graph(const vector<string>& all_rows, int row_index, int M
         graph_vertices.push_back(vertex);
     }
 
-	# adding edges between vertices/words with common languages, except those with the same initial letter
+	// adding edges between vertices/words with common languages, except those with the same initial letter
     for (size_t i = 0; i < graph_vertices.size(); ++i) {
         for (size_t j = 0; j < graph_vertices.size(); ++j) {
             if (i != j) {
@@ -57,7 +57,7 @@ vector<Vertex*> build_graph(const vector<string>& all_rows, int row_index, int M
     return graph_vertices;
 }
 
-# identifying the vertices with the initial and final languages, to mark the sources and destinations for executing the shortest path algorithm (Dijkstra)
+// identifying the vertices with the initial and final languages, to mark the sources and destinations for executing the shortest path algorithm (Dijkstra)
 void find_sources_and_destinations(const vector<Vertex*>& graph_vertices, const string& O, const string& D, vector<Vertex*>& sources, vector<Vertex*>& destinations) {
     for (size_t i = 0; i < graph_vertices.size(); ++i) {
         Vertex* v = graph_vertices[i];
@@ -92,7 +92,7 @@ double dijkstra(vector<Vertex*>& graph_vertices, Vertex* source, const vector<Ve
 
         set_s.insert(nearest_vertex);
 
-		# the comparison "distance" is the length of the word, symbolizing the weight of the edge. This way, pairs of words with shorter lengths will be chosen by the Dijkstra algorithm when looking for the shortest path to a destination vertex.
+		// the comparison "distance" is the length of the word, symbolizing the weight of the edge. This way, pairs of words with shorter lengths will be chosen by the Dijkstra algorithm when looking for the shortest path to a destination vertex.
         for (size_t i = 0; i < nearest_vertex->adj.size(); ++i) {
             Vertex* neighbor = nearest_vertex->adj[i];
             if (!neighbor->finished) {
