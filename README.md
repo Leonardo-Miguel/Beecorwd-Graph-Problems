@@ -4,8 +4,8 @@ Foram utilizados algoritmos clássicos aplicados aos grafos, como a busca em lar
 
 Os problemas são:
 
-1085	Babel
-1205	Cerco a Leningrado
-1552	Resgate em Queda Livre
-2646	Secret Chamber at Mount Rushmore
-2962	Arte Valiosa
+* 1085	Babel
+* 1205	Cerco a Leningrado
+* 1552	Resgate em Queda Livre
+* 2646	Secret Chamber at Mount Rushmore
+* 2962	Arte Valiosa
