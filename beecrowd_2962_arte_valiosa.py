@@ -94,10 +94,10 @@ def BFS(graph):
     
 #####################
  
-with open('6_arte_valiosa.txt', 'r') as file:
-    all_rows = file.readlines() 
+#with open('6_arte_valiosa.txt', 'r') as file:
+#    all_rows = file.readlines() 
     
-# all_rows = sys.stdin.readlines()
+all_rows = sys.stdin.readlines()
 
 info_input = all_rows[0].split()
 m, n, k = float(info_input[0]), float(info_input[1]), int(info_input[2])
